@@ -1,0 +1,12 @@
+SELECT 	restaurants.restaurant_id,
+		restaurants.restaurant_name, 
+		restaurants.address, 
+		restaurants.phone, 
+		restaurants.gmaps_link, 
+		restaurants.price_range, 
+		restaurants.google_rating, 
+		restaurants.lat, 
+		restaurants.long 
+FROM restaurants INNER JOIN dishes ON restaurants.restaurant_id = dishes.restaurant_id
+WHERE restaurants.city = 'Albany' AND restaurants.state = 'New York'
+AND dishes.gluten = False;
